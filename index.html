@@ -8,22 +8,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="form-popup"  id="mainForm">
+        <form action="" class="form-container" id="myForm">
+          
+            <h1>Add New Book</h1>
+      
+          <label for="Title"><b>Title</b></label>
+          <input type="text" placeholder="Enter Title" name="Title" required>
+      
+          <label for="Author"><b>Author</b></label>
+          <input type="text" placeholder="Enter Author" name="Author" required>
+
+          <label for="Page-Num"><b>Page-Number</b></label>
+          <input type="number" name="Page-Num" required>
+
+          <input type="checkbox" id="read" name="read" value="True">
+          <label for="read"><b>Read</b></label>
+           <div class="buttons">
+        <div>
+            <br>
+          <button type="button" class="btn" onclick="viewGrid()"><b>Add Book</b></button>
+          </div>
+         <div>
+            <br>
+          <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+          </div>
+          </div>
+        </form>
+      </div>
     <div class="main-container">
         <div class="header">
             <div class="main-title">
                Library
             </div>
             <div class="add-book">
-               <button class="add-btn" >Add Book</button> 
+               <button class="add-btn" onclick="openForm()">Add Book</button> 
             </div>
 
         </div>
         <div class="main-body">
-2
+         
+
         </div>
         <div class="footer">
 3
         </div>
     </div>
+    
+
+
+
+<script src="index.js"></script>
 </body>
 </html>
