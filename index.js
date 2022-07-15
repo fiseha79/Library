@@ -30,20 +30,43 @@ function addBookToLibrary(){
     myLibrary= myLibrary.push(Book1);
 
 }
+function readOrNot (read){
+  if(read == 'True'){
+    read='read';
+   }
+   else{
+    read='Not read'
+   }
 
+   return read;
+
+} 
 function viewGrid(){
     let title1 = document.getElementById("myForm").elements.namedItem("Title").value;
+    let author1 = document.getElementById("myForm").elements.namedItem("Author").value;
+    let pages1 = document.getElementById("myForm").elements.namedItem("Page-Num").value;
+    let read1 = document.querySelector('#read');
+    if(read1.checked == true){
+      read1='Read';
+     }
+     else{
+      read1='Not Read'
+     }
+
+    //read1 = readOrNot(read1);
+
     let container = document.querySelector('.main-body');
     let content = document.createElement('div');
      content.classList.add('book-card');
      let title = document.createElement('div');
      title.textContent = 'Title: ' + title1;
      let author = document.createElement('div');
-     author.textContent = 'Author: ';
+     author.textContent = 'Author: ' + author1;
      let pages = document.createElement('div');
-     pages.textContent = 'Page-Num: ';
+     pages.textContent = 'Page-Num: ' + pages1;
      let read = document.createElement('div');
-     read.textContent = 'Read: ';
+     
+     read.textContent = 'Read: ' + read1;
      let button = document.createElement('div');
      button.textContent = 'Button: ';
 
