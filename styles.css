@@ -10,14 +10,18 @@ body{
     height: 100vh;
 
 }
-.main-container > div{
-    border: 1px solid black;
-}
+
 
 .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #d1d5db;
+}
+
+.footer{
+  background-color: #d1d5db;
+  text-align: center;
+
 }
 
 .main-title {
@@ -49,6 +53,7 @@ body{
     overflow: hidden;
     z-index: 1;
     border: none;
+    margin-right:5px;
   }
   .add-btn:after {
     content: "";
@@ -162,15 +167,19 @@ body{
    grid-gap: 1rem;
    padding: 10px;
    overflow: scroll;
+   
   }
 
   .book-card{
     display:grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
    
     padding-left:10px;
-    border-radius: 0.1rem;
-    background-color: #e5e5e5;
-    box-shadow: 0.5rem 0.5rem #bebdbd;
+    background: rgba( 237, 225, 225, 0.4 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   }
